@@ -7,7 +7,7 @@ class Paladin extends Perso{
 	private $order;
 	private $weapon;
 
-	public function __construct($nom, $force, $exp, $order, $weapon){
+	public function __construct($nom, $force, $exp, $order, $weapon = array()){
 		parent::__construct($nom, $force, $exp);
 		$this->order = $order;
 		$this->weapon = $weapon;
@@ -28,8 +28,24 @@ class Paladin extends Perso{
 		$this->weapon = $weapon;
 	}
 
-}
 
+	public function afficheWeapon(){
+		$weapon = $this->getWeapon();
+		$affiche = "";
+
+		if (count($weapon) == 0){
+			$affiche = "pas d'arme";
+		} 
+		else{
+			$affiche .="liste des armes: ";
+			foreach ($weapon as $weapon){
+
+				$affiche .= $weapon. "/";
+			}
+		}
+		echo $affiche;
+	}
+}
 
 
 //Paladin legacy I

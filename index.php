@@ -8,12 +8,15 @@ require "Paladin.class.php";
 
 require "Vagabond.class.php";
 
-$cas1 = new Vampire("Guyver", 34, 80, "persuation" , "Épée" , 3, 5);
-
-echo "<p>" .$cas1->getNom() ." est un Paladin d' une force de ".$cas1->getForce() ." avec une experience de ".$cas1->getExp() ." points, en tant que Paladin Vampire, il peut disparairtre " .$cas1->getDisappear() ." fois par partie, et ses points de methamophose sont de " .$cas1->getMetamorph() ." sur 5" ."</p>";
 
 
 //Paladin
+$cas1 = new Vampire("Guyver", 34, 80, "persuation" , array("Épée", "bouclier"), 3, 5);
+
+echo "<p>" .$cas1->getNom() ." est un Paladin d' une force de ".$cas1->getForce() ." avec une experience de ".$cas1->getExp() ." points, en tant que Paladin Vampire, il peut disparairtre " .$cas1->getDisappear() ." fois par partie, et ses points de methamophose sont de " .$cas1->getMetamorph() ." sur 5 " .$cas1->afficheWeapon() ."</p>";
+
+
+//Paladin Vampire
 $cas2 =  new Regular("Guyver The Vampire", 54, 80, "Commander" , "Épée", 71, "18/10");
 
 echo "<p>" ."Le Paladin régulier lui ne peut disparaitre ni ce métamorphosé, en revanche sont  ouïe exceptionnel de " .$cas2->getHearing() ." point et couplé a une vue d'aigle de " .$cas2->getSight() ." (excusez du peux) lui permettrons de faire la différence" ."</p>";
