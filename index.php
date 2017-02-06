@@ -13,7 +13,7 @@ require "Vagabond.class.php";
 //Paladin
 $cas1 = new Vampire("Guyver", 34, 80, "persuation" , array("Épée", "bouclier"), 3, 5);
 
-echo "<p>" .$cas1->getNom() ." est un Paladin d' une force de ".$cas1->getForce() ." avec une experience de ".$cas1->getExp() ." points, en tant que Paladin Vampire, il peut disparairtre " .$cas1->getDisappear() ." fois par partie, et ses points de methamophose sont de " .$cas1->getMetamorph() ." sur 5 " .$cas1->afficheWeapon() ."</p>";
+echo "<p>" .$cas1->getNom() ." est un Paladin d' une force de ".$cas1->getForce() ." avec une experience de ".$cas1->getExp() ." points, en tant que Paladin Vampire, il peut disparairtre " .$cas1->getDisappear() ." fois par partie, et ses points de methamophose sont de " .$cas1->getMetamorph() ." sur 5 " ; print $cas1->afficheWeapon() ."</p>";
 
 
 //Paladin Vampire
